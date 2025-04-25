@@ -6,22 +6,22 @@ const partners = [
   {
     id: 1,
     name: "Local Shelter A",
-    logo: "https://via.placeholder.com/100x50?text=Shelter+A",
+    logo: "https://placehold.co/100x50?text=Shelter+A",
   },
   {
     id: 2,
     name: "Pet Food Co B",
-    logo: "https://via.placeholder.com/100x50?text=Food+Co+B",
+    logo: "https://placehold.co/100x50?text=Food+Co+B",
   },
   {
     id: 3,
     name: "Vet Clinic C",
-    logo: "https://via.placeholder.com/100x50?text=Vet+C",
+    logo: "https://placehold.co/100x50?text=Vet+C",
   },
   {
     id: 4,
     name: "Pet Supply D",
-    logo: "https://via.placeholder.com/100x50?text=Supply+D",
+    logo: "https://placehold.co/100x50?text=Supply+D",
   },
 ];
 

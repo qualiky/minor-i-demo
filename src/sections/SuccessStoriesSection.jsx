@@ -7,8 +7,8 @@ const mockSuccessStories = [
     petName: "Luna",
     story:
       "Luna was found injured on the streets—today, she’s a therapy dog for children, bringing smiles wherever she goes. Her transformation is a testament to the power of love and care.",
-    imageBefore: "/placeholders/luna-before.jpg", // Placeholder image paths
-    imageAfter: "/placeholders/luna-after.jpg",
+    imageBefore: "https://placehold.co/200x200?text=Luna-Before", // Placeholder image paths
+    imageAfter: "https://placehold.co/200x200?text=Luna-After",
     adopterName: "The Miller Family",
   },
   {
@@ -16,8 +16,8 @@ const mockSuccessStories = [
     petName: "Buddy",
     story:
       "Buddy, a shy senior cat, spent years in the shelter. Now, he’s king of his castle, curled up on a warm lap, proving that age is just a number when it comes to finding forever love.",
-    imageBefore: "/placeholders/buddy-before.jpg",
-    imageAfter: "/placeholders/buddy-after.jpg",
+    imageBefore: "https://placehold.co/200x200?text=Buddy-Before",
+    imageAfter: "https://placehold.co/200x200?text=Buddy-After",
     adopterName: "Sarah & Tom",
   },
   {
@@ -25,8 +25,8 @@ const mockSuccessStories = [
     petName: "Daisy",
     story:
       "Daisy was abandoned but never lost hope. Adopted by a family with kids, she’s now their energetic playmate, filling their home with laughter and endless tail wags.",
-    imageBefore: "/placeholders/daisy-before.jpg",
-    imageAfter: "/placeholders/daisy-after.jpg",
+    imageBefore: "https://placehold.co/200x200?text=Daisy-Before",
+    imageAfter: "https://placehold.co/200x200?text=Daisy-After",
     adopterName: "The Garcia Family",
   },
 ];
@@ -52,8 +52,8 @@ const SuccessStoriesSection = () => {
   // Need to add images to /public directory
   // Create /public/placeholders directory and add images like luna-before.jpg, luna-after.jpg etc.
   // For now, you can use generic placeholder images if you don't have specific ones.
-  // Example: imageBefore: 'https://via.placeholder.com/400x300?text=Before',
-  //          imageAfter: 'https://via.placeholder.com/400x300?text=After',
+  // Example: imageBefore: 'https://placehold.co/400x300?text=Before',
+  //          imageAfter: 'https://placehold.co/400x300?text=After',
 
   return (
     <section className={styles.successStories}>
@@ -70,7 +70,7 @@ const SuccessStoriesSection = () => {
                   <img
                     src={
                       story.imageBefore ||
-                      "https://via.placeholder.com/400x300?text=Before"
+                      "https://placehold.co/400x300?text=Before"
                     }
                     alt={`${story.petName} Before`}
                   />
@@ -80,7 +80,7 @@ const SuccessStoriesSection = () => {
                   <img
                     src={
                       story.imageAfter ||
-                      "https://via.placeholder.com/400x300?text=After"
+                      "https://placehold.co/400x300?text=After"
                     }
                     alt={`${story.petName} After`}
                   />

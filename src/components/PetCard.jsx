@@ -6,7 +6,7 @@ const PetCard = ({ pet, onCardClick }) => {
   const imageUrl =
     pet.photos && pet.photos.length > 0
       ? pet.photos[0]
-      : "https://via.placeholder.com/300x200?text=No+Image";
+      : "https://placehold.co/300x200?text=No+Image";
 
   return (
     <div

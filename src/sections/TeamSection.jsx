@@ -7,25 +7,25 @@ const teamMembers = [
     id: 1,
     name: "Jane Doe",
     role: "Founder",
-    photo: "https://via.placeholder.com/150?text=Jane+Doe",
+    photo: "https://placehold.co/150?text=Jane+Doe",
   },
   {
     id: 2,
     name: "John Smith",
     role: "Lead Vet",
-    photo: "https://via.placeholder.com/150?text=John+Smith",
+    photo: "https://placehold.co/150?text=John+Smith",
   },
   {
     id: 3,
     name: "Emily Johnson",
     role: "Adoption Coordinator",
-    photo: "https://via.placeholder.com/150?text=Emily+J",
+    photo: "https://placehold.co/150?text=Emily+J",
   },
   {
     id: 4,
     name: "David Lee",
     role: "Volunteer Manager",
-    photo: "https://via.placeholder.com/150?text=David+L",
+    photo: "https://placehold.co/150?text=David+L",
   },
 ];
 
