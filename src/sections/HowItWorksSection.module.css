@@ -1,0 +1,66 @@
+.howItWorks {
+    padding: 20px;
+    background-color: var(--background-color-light); /* White background */
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+    text-align: center; /* Center content */
+}
+
+.howItWorks h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px; /* More space below heading */
+}
+
+.stepsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* More space between steps */
+    justify-content: center;
+    margin-bottom: 30px; /* Space before button */
+}
+
+.step {
+    flex: 1;
+    min-width: 200px; /* Slightly larger min-width */
+    max-width: 300px; /* Max width for larger screens */
+    text-align: center;
+    padding: 25px; /* More padding */
+    border: 2px dashed var(--secondary-color);
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    background-color: var(
+        --card-background-light
+    ); /* Light background for steps */
+}
+
+.stepNumber {
+    font-size: 2em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1.1em;
+    margin-bottom: 0; /* Remove margin below paragraph in step */
+}
+
+.howItWorks button {
+    /* Inherits general button styles */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .howItWorks {
+        padding: 15px;
+    }
+    .stepsContainer {
+        flex-direction: column; /* Stack steps vertically on mobile */
+        align-items: center;
+    }
+    .step {
+        min-width: 90%; /* Allow steps to take up more width on mobile */
+        max-width: none;
+    }
+}

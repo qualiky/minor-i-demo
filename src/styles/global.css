@@ -1,0 +1,279 @@
+/* --- Branding Variables --- */
+:root {
+    /* Light Mode Defaults */
+    --primary-color: #ff6b6b; /* Warm Coral */
+    --primary-color-rgb: 255, 107, 107;
+    --secondary-color: #4ecdc4; /* Mint Green */
+
+    --background-color-light: #ffffff;
+    --text-color-light: #333;
+    --card-background-light: #f9f9f9;
+    --border-color-light: #ddd;
+    --link-color-light: var(--primary-color); /* Links in light mode */
+    --link-color-hover-light: #e05a5a; /* Darker coral hover */
+
+    /* Dark Mode Variables (Define here but applied in .dark-mode) */
+    --background-color-dark: #1a1a1a;
+    --text-color-dark: #f0f0f0;
+    --card-background-dark: #2a2a2a;
+    --border-color-dark: #555;
+    --link-color-dark: var(--secondary-color); /* Links in dark mode */
+    --link-color-hover-dark: #3cb2aa; /* Darker mint hover */
+
+    /* Fonts */
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Roboto", sans-serif;
+}
+
+/* --- Apply Dark Mode Styles --- */
+/* When the body has the dark-mode class, update the variables */
+body.dark-mode {
+    --background-color-light: var(
+        --background-color-dark
+    ); /* Swap background */
+    --text-color-light: var(--text-color-dark); /* Swap text color */
+    --card-background-light: var(
+        --card-background-dark
+    ); /* Swap card background */
+    --border-color-light: var(--border-color-dark); /* Swap border color */
+    --link-color-light: var(--link-color-dark); /* Swap link color */
+    --link-color-hover-light: var(
+        --link-color-hover-dark
+    ); /* Swap link hover color */
+
+    /* Optional: Adjust primary/secondary colors for dark mode if needed */
+    /* --primary-color: #FF9B9B; */ /* Lighter coral for dark mode */
+    /* --secondary-color: #6BE0D9; */ /* Lighter mint for dark mode */
+}
+
+/* --- Basic Reset & Body Styles --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    /* Use the _light_ variables here, as they will be swapped in .dark-mode */
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Smooth transition for theme change on body */
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease;
+}
+
+/* Remove default margin/padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Anchor Link Styles */
+a {
+    color: var(--link-color-light); /* Use the variable */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth link color transition */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--link-color-hover-light); /* Use hover variable */
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    margin-bottom: 0.5em;
+    /* Use a color that works well in both themes, or define separate variables */
+    /* For simplicity, let's keep primary-color for headings, or define --heading-color */
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* ... rest of global.css ... */
+
+/* --- Basic Header/Footer Styles (using variables) --- */
+/* Ensure these styles in global.css also use the light variables */
+header {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    border-bottom: 1px solid var(--border-color-light);
+    /* ... other styles ... */
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease,
+        border-bottom-color 0.5s ease;
+}
+
+header nav ul li a {
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color); /* Keeping primary color for hover */
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    border-top: 1px solid var(--border-color-light);
+    /* ... other styles ... */
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease,
+        border-top-color 0.5s ease;
+}
+
+footer .footer-section h3 {
+    color: var(--primary-color); /* Keeping primary color */
+}
+
+footer .footer-section a {
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+}
+
+footer .footer-section a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* --- Placeholder/Layout Styles (Update to use variables) --- */
+main section {
+    background-color: var(--card-background-light);
+    border: 1px solid var(--border-color-light);
+    transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease;
+}
+
+button {
+    /* Assuming button colors are primary/white, less dependent on theme text/bg */
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--link-color-hover-light); /* Using link hover var */
+}
+
+/* ... rest of placeholder/layout styles ... */
+/* Ensure any specific colors for placeholders like .step, .cta-card, .pet-card-placeholder, .map-placeholder, form elements */
+/* now use the theme-aware variables like --card-background-light, --border-color-light, --text-color-light */
+/* Example: */
+.step {
+    border: 2px dashed var(--secondary-color);
+    background-color: var(--card-background-light);
+    transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease;
+}
+.stepNumber {
+    color: var(--secondary-color);
+}
+
+.cta-card,
+.team-member-card {
+    background-color: var(--background-color-light);
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, var(--shadow-opacity, 0.05)); /* Adjust shadow opacity maybe? */
+    color: var(--text-color-light); /* Ensure text color updates */
+    transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease,
+        color 0.5s ease,
+        box-shadow 0.3s ease;
+}
+.cta-card h3,
+.team-member-card h3 {
+    color: var(--secondary-color);
+}
+.team-member-card p {
+    color: var(--text-color-light); /* Ensure text color updates */
+}
+
+/* Update form elements to use variables */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form textarea,
+form select {
+    border: 1px solid var(--border-color-light);
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition:
+        border-color 0.5s ease,
+        background-color 0.5s ease,
+        color 0.5s ease;
+}
+form label {
+    color: var(--text-color-light); /* Ensure label color updates */
+}
+.errorMessage {
+    color: var(--primary-color); /* Keep error color consistent */
+}
+.hint {
+    color: var(--text-color-light); /* Hint text should follow theme */
+    opacity: 0.8; /* Maybe slightly less prominent */
+}
+
+/* Update Gallery placeholder styles */
+.pet-card-placeholder {
+    background-color: var(--card-background-light);
+    border: 1px solid var(--border-color-light);
+    color: var(--text-color-light);
+    transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease,
+        color 0.5s ease;
+}
+
+.map-placeholder {
+    background-color: var(--card-background-light); /* Use card background */
+    border: 1px solid var(--border-color-light);
+    color: var(--text-color-light);
+    transition:
+        background-color 0.5s ease,
+        border-color 0.5s ease,
+        color 0.5s ease;
+}
+
+/* Update news placeholder styles */
+.ajax-content-placeholder {
+    border: 1px dashed var(--secondary-color); /* Keep secondary dashed border */
+    color: var(--text-color-light);
+}
+
+/* Update FAQ placeholder styles */
+.faq-accordion-placeholder {
+    border: 1px dashed var(--primary-color); /* Keep primary dashed border */
+    color: var(--text-color-light);
+}

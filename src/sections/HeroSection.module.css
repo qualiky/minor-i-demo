@@ -1,0 +1,54 @@
+.hero {
+    text-align: center;
+    padding: 60px 20px; /* More padding for prominence */
+    background-color: var(
+        --secondary-color
+    ); /* Using secondary color for contrast */
+    color: white; /* Text color on secondary background */
+    border-radius: 8px;
+    margin-bottom: 40px; /* Space below section */
+}
+
+.hero h1 {
+    font-size: 3em; /* Larger heading */
+    margin-bottom: 15px;
+    color: white; /* White heading on this background */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-family: var(--font-primary); /* Use primary font for subheadline */
+}
+
+.ctaButtons button {
+    /* Inherits general button styles, can add specific overrides */
+    background-color: var(--primary-color); /* Use primary color for buttons */
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Larger buttons */
+    font-size: 1.1em;
+    margin: 0 10px; /* Space between buttons */
+}
+
+.ctaButtons button:hover {
+    background-color: #e05a5a; /* Slightly darker coral */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 15px;
+    }
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .ctaButtons button {
+        display: block; /* Stack buttons on mobile */
+        width: 80%; /* Make buttons wider */
+        margin: 10px auto; /* Center stacked buttons */
+    }
+}

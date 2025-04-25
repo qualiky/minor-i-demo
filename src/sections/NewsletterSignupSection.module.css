@@ -1,0 +1,88 @@
+.newsletterSignup {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+}
+
+.newsletterSignup h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px; /* Less margin than other headings */
+}
+
+.newsletterSignup p {
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+}
+
+.newsletterSignup form {
+    /* Optional: Add flex or grid for layout */
+    display: flex;
+    flex-wrap: wrap; /* Allow fields to wrap */
+    gap: 15px; /* Space between form groups */
+    align-items: flex-start;
+}
+
+.newsletterSignup .formGroup {
+    /* Adjust form group styles for flex layout */
+    flex: 1; /* Allow growth */
+    min-width: 200px; /* Minimum width for fields */
+    margin-bottom: 0; /* Remove default margin if using flex gap */
+    position: relative; /* Needed for validation icon */
+}
+
+.newsletterSignup .formGroup label {
+    /* Inherits from global/StepStyles */
+}
+
+.newsletterSignup input[type="email"],
+.newsletterSignup input[type="text"] {
+    /* Inherits from global/StepStyles */
+}
+
+.newsletterSignup button[type="submit"] {
+    /* Inherits global button styles */
+    /* Adjust for flex layout */
+    align-self: flex-start; /* Align button to the top */
+    margin-top: 25px; /* Align baseline with inputs */
+    padding: 10px 20px;
+}
+
+.newsletterSignup .successMessage,
+.newsletterSignup .errorMessage {
+    /* Inherits styles from GeneralInquiryFormSection */
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .newsletterSignup {
+        padding: 15px;
+    }
+    .newsletterSignup h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+    .newsletterSignup p {
+        margin-bottom: 15px;
+    }
+    .newsletterSignup form {
+        flex-direction: column; /* Stack fields vertically */
+        gap: 10px;
+    }
+    .newsletterSignup .formGroup {
+        min-width: 100%; /* Full width on mobile */
+        margin-bottom: 0;
+    }
+    .newsletterSignup button[type="submit"] {
+        width: 100%; /* Full width button */
+        margin-top: 10px; /* Space above stacked button */
+        align-self: stretch; /* Stretch button */
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}

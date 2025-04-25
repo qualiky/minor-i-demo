@@ -1,0 +1,77 @@
+.ctaGrid {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+    text-align: center; /* Center heading */
+}
+
+.ctaGrid h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    ); /* Responsive grid for cards */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(
+        --background-color-light
+    ); /* White background for cards */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color-light);
+    font-family: var(--font-primary);
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column;
+    justify-content: space-between; /* Space content */
+    align-items: center; /* Center content horizontally */
+}
+
+.card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.card p {
+    margin-bottom: 20px; /* Space between description and button */
+    font-family: var(--font-secondary);
+    font-size: 1em;
+    flex-grow: 1; /* Allow paragraph to take space */
+}
+
+.card button {
+    /* Inherits general button styles */
+    width: 100%; /* Make button full width in card */
+    margin: 0; /* Remove margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ctaGrid {
+        padding: 15px;
+    }
+    .cardsContainer {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        ); /* Adjust min-width for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 20px; /* Reduce padding */
+    }
+}

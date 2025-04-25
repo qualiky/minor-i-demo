@@ -1,0 +1,163 @@
+.successStories {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+    text-align: center; /* Center heading and button */
+    overflow: hidden; /* Hide parts of slides that are outside the container */
+    position: relative; /* Needed for absolute positioning of buttons */
+}
+
+.successStories h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.carouselContainer {
+    position: relative; /* Contains the slides and buttons */
+    width: 90%; /* Make carousel slightly narrower than the section */
+    max-width: 800px; /* Max width for the carousel */
+    margin: 0 auto 30px auto; /* Center carousel and add space below */
+    overflow: hidden; /* Crucial to hide slides outside the view */
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+}
+
+.carouselContent {
+    display: flex; /* Arrange slides in a row */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+}
+
+.carouselSlide {
+    min-width: 100%; /* Each slide takes the full width of its container */
+    box-sizing: border-box; /* Include padding/border in width */
+    display: flex; /* Arrange image and text side-by-side */
+    flex-direction: column; /* Stack content initially */
+    align-items: center;
+    padding: 20px;
+    background-color: var(
+        --background-color-light
+    ); /* White background for slides */
+}
+
+.storyImages {
+    display: flex; /* Arrange before/after images */
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    justify-content: center;
+}
+
+.imageWrapper {
+    text-align: center;
+    width: 100%; /* Full width on mobile */
+    max-width: 250px; /* Limit max width */
+}
+
+.storyImages img {
+    max-width: 100%; /* Images fit within their container */
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--border-color-light);
+}
+
+.storyImages p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 0; /* Remove margin */
+    font-family: var(--font-secondary);
+}
+
+.storyText {
+    flex: 1; /* Allow text to take available space */
+    text-align: left; /* Align story text left */
+}
+
+.storyText h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.storyText p {
+    margin-bottom: 15px;
+    font-family: var(--font-secondary);
+}
+
+.adopter {
+    font-style: italic;
+    text-align: right; /* Align adopter name right */
+    color: #555;
+}
+
+/* Carousel Navigation Buttons */
+.carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons are above slides */
+    border-radius: 50%; /* Circle buttons */
+    font-size: 1.2em;
+    line-height: 1; /* Center text vertically */
+    transition: background-color 0.3s ease;
+}
+
+.carouselButton:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+    .carouselSlide {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+        gap: 30px; /* Space between images and text */
+        align-items: flex-start; /* Align items to the top */
+    }
+    .storyImages {
+        flex-direction: column; /* Stack images vertically */
+        gap: 10px;
+        margin-bottom: 0;
+    }
+    .imageWrapper {
+        width: auto; /* Auto width based on content */
+    }
+    .storyText {
+        padding-top: 10px; /* Align text top with images */
+    }
+}
+
+@media (max-width: 768px) {
+    .successStories {
+        padding: 15px;
+    }
+    .carouselContainer {
+        width: 100%; /* Full width on mobile */
+    }
+    .carouselButton {
+        padding: 8px 12px; /* Smaller buttons */
+        font-size: 1em;
+        top: auto; /* Adjust position */
+        bottom: 10px; /* Position at bottom */
+        transform: translateY(0);
+    }
+    .prev {
+        left: 35%;
+    } /* Center buttons roughly below carousel */
+    .next {
+        right: 35%;
+    }
+}

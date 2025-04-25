@@ -1,0 +1,127 @@
+.petCard {
+    background-color: var(--card-background-light);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    cursor: pointer; /* Indicate it's clickable */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack image and info */
+    position: relative; /* Needed for absolute positioning of overlays */
+}
+
+/* Optional: Style for adopted pets */
+.adopted {
+    opacity: 0.7; /* Dim adopted cards slightly */
+    /* pointer-events: none; */ /* Make them unclickable? Or just show status */
+}
+
+.imageContainer {
+    width: 100%;
+    padding-top: 75%; /* Creates a 4:3 aspect ratio (height is 75% of width) */
+    position: relative;
+    overflow: hidden; /* Hide overflowing parts of the image during scale */
+}
+
+.petImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container, crop as needed */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+/* Name reveal overlay */
+.nameOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(
+        var(--primary-color-rgb, 255, 107, 107),
+        0.8
+    ); /* Semi-transparent primary color */
+    color: white;
+    text-align: center;
+    padding: 10px 5px;
+    font-family: var(--font-primary);
+    font-size: 1.2em;
+    font-weight: bold;
+    transform: translateY(100%); /* Start below the container */
+    transition: transform 0.3s ease; /* Smooth slide-up transition */
+    z-index: 1; /* Ensure it's above the image */
+}
+
+/* Adopted status overlay */
+.adoptedOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Above name overlay */
+}
+
+/* Hover effect */
+.petCard:hover {
+    transform: translateY(-5px); /* Lift card slightly */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.petCard:hover .petImage {
+    transform: scale(1.05); /* Scale image slightly */
+}
+
+.petCard:hover .nameOverlay {
+    transform: translateY(0); /* Slide name overlay up */
+}
+
+.info {
+    padding: 15px;
+    text-align: left; /* Align text left */
+    flex-grow: 1; /* Allow info section to take remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.info p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: var(--text-color-light);
+    font-family: var(--font-secondary);
+}
+
+.info p:last-of-type {
+    margin-bottom: 0;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: 10px;
+    border-top: 1px solid var(--border-color-light);
+    padding-top: 10px;
+    font-size: 0.95em !important; /* Override default p size if needed */
+    color: #666 !important; /* Override text color */
+}
+
+/* Need to define --primary-color-rgb in global.css for the overlay */
+/* Add this to :root in src/styles/global.css */
+/* --primary-color-rgb: 255, 107, 107; */

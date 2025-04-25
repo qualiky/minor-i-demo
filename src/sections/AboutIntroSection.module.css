@@ -1,0 +1,28 @@
+.aboutIntro {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+}
+
+.aboutIntro h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.aboutIntro p {
+    margin-bottom: 15px;
+}
+
+.aboutIntro button {
+    /* Inherits general button styles */
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .aboutIntro {
+        padding: 15px;
+    }
+}

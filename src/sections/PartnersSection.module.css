@@ -1,0 +1,57 @@
+.partners {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px; /* Add margin below the last section */
+}
+
+.partners h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center; /* Center heading */
+}
+
+.partnersGrid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(120px, 1fr)
+    ); /* Responsive grid for logos */
+    gap: 30px; /* Space between logos */
+    justify-items: center; /* Center logos in their grid cell */
+    align-items: center; /* Center logos vertically */
+}
+
+.partnerLogo img {
+    max-width: 100px; /* Max width for logo image */
+    height: auto;
+    display: block; /* Remove extra space below image */
+    filter: grayscale(100%); /* Optional: make logos grayscale */
+    opacity: 0.7; /* Optional: reduce opacity */
+    transition:
+        filter 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.partnerLogo img:hover {
+    filter: grayscale(0%); /* Full color on hover */
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .partners {
+        padding: 15px;
+    }
+    .partnersGrid {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(80px, 1fr)
+        ); /* Adjust min-width */
+        gap: 20px;
+    }
+    .partnerLogo img {
+        max-width: 80px;
+    }
+}

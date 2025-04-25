@@ -1,0 +1,179 @@
+.petDetailsModal {
+    position: relative; /* Needed for the close button */
+    max-width: 100%; /* Ensure content doesn't exceed modal width */
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--text-color-light);
+    transition: color 0.3s ease;
+    z-index: 10; /* Ensure it's clickable above content */
+}
+
+.closeButton:hover {
+    color: var(--primary-color);
+}
+
+.petDetailsModal h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-right: 30px; /* Make space for the close button */
+}
+
+.photoCarousel {
+    position: relative;
+    width: 100%;
+    max-height: 400px; /* Max height for the carousel */
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #eee; /* Placeholder background */
+    display: flex; /* Center image */
+    justify-content: center;
+    align-items: center;
+}
+
+.currentPhoto {
+    display: block;
+    max-width: 100%;
+    max-height: 400px; /* Ensure image fits within max height */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Contain image within the area */
+}
+
+.carouselNavButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 4px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.carouselNavButton:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+.photoIndicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 1;
+}
+
+.indicator {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: var(--primary-color); /* Active indicator color */
+}
+
+.details {
+    /* Inherits spacing from global p styles */
+}
+
+.details h3 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px solid var(--border-color-light); /* Separator line */
+    padding-bottom: 5px;
+}
+
+.details p {
+    margin-bottom: 10px;
+}
+
+.details p strong {
+    color: #555; /* Slightly darker color for labels */
+}
+
+.availableStatus {
+    color: green;
+    font-weight: bold;
+}
+.adoptedStatus {
+    color: #888;
+    font-weight: bold;
+}
+
+.callToAction {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color-light);
+    text-align: center;
+}
+
+.callToAction p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.callToAction button {
+    /* Inherits general button styles */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .petDetailsModal h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    .photoCarousel {
+        max-height: 300px; /* Reduce height on mobile */
+    }
+    .currentPhoto {
+        max-height: 300px;
+    }
+    .carouselNavButton {
+        padding: 8px 12px; /* Smaller buttons */
+        font-size: 1em;
+    }
+    .photoIndicators {
+        bottom: 5px; /* Adjust position */
+    }
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .details {
+        font-size: 0.95em; /* Slightly smaller text */
+    }
+    .details h3 {
+        font-size: 1em;
+    }
+    .callToAction p {
+        font-size: 1em;
+    }
+}

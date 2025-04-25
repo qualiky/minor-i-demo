@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Spring Adoption Event Success!",
+    "excerpt": "Our recent adoption event saw record numbers of pets finding homes. Read about the heartwarming matches and community turnout.",
+    "date": "2023-05-15"
+  },
+  {
+    "id": 2,
+    "title": "Volunteer Spotlight: Meet Sarah!",
+    "excerpt": "Sarah has been volunteering with PawPal for over a year, dedicating her weekends to walking dogs and socializing cats. Learn about her inspiring journey.",
+    "date": "2023-05-10"
+  },
+  {
+    "id": 3,
+    "title": "New Partnership with Local Vet Clinic",
+    "excerpt": "We're excited to announce a partnership with 'Healthy Paws Vet Clinic' to provide discounted initial check-ups for all adopted pets.",
+    "date": "2023-05-01"
+  },
+  {
+    "id": 4,
+    "title": "Tips for Introducing a New Pet",
+    "excerpt": "Bringing a new furry family member home? Check out our latest blog post with essential tips for a smooth transition for everyone involved.",
+    "date": "2023-04-25"
+  },
+  {
+    "id": 5,
+    "title": "Urgent Need for Foster Homes",
+    "excerpt": "Our shelter is currently at capacity. Fostering provides a temporary, loving environment for pets and helps us save more lives.",
+    "date": "2023-04-20"
+  }
+]

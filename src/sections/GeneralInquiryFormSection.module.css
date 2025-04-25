@@ -1,0 +1,63 @@
+.generalInquiryForm {
+    padding: 20px;
+    background-color: var(--background-color-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+}
+
+.generalInquiryForm h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Inherits form group and input styles from StepStyles.module.css via global */
+/* If styles are not global, would need to re-define or import here */
+
+.generalInquiryForm button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px; /* Space above submit button */
+    padding: 12px 20px;
+    font-size: 1.1em;
+}
+
+.successMessage,
+.errorMessage {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+}
+
+.successMessage {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.errorMessage {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .generalInquiryForm {
+        padding: 15px;
+    }
+    .generalInquiryForm h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+    .generalInquiryForm button[type="submit"] {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+    .successMessage,
+    .errorMessage {
+        font-size: 0.9em;
+    }
+}

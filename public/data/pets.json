@@ -1,0 +1,107 @@
+[
+  {
+    "id": "pet-001",
+    "name": "Bella",
+    "species": "Dog",
+    "breed": "Labrador Mix",
+    "age": 2,
+    "size": "Medium",
+    "gender": "Female",
+    "status": "Available",
+    "tagline": "Energetic cuddle bug!",
+    "photos": [
+      "/placeholders/pets/bella-1.jpg",
+      "/placeholders/pets/bella-2.jpg",
+      "/placeholders/pets/bella-3.jpg"
+    ],
+    "story": "Bella is a sweet girl who loves to play fetch and go for long walks. She's great with kids and gets along well with other dogs. She came to us as a stray but has quickly adjusted to shelter life. She's eager to find her forever home!",
+    "medicalHistory": "Up-to-date on vaccinations, spayed, microchipped.",
+    "compatibility": {
+      "children": "Good with children of all ages.",
+      "otherPets": "Good with other dogs, unknown with cats."
+    },
+    "location": "Main Shelter"
+  },
+  {
+    "id": "pet-002",
+    "name": "Oliver",
+    "species": "Cat",
+    "breed": "Domestic Shorthair",
+    "age": 5,
+    "size": "Small",
+    "gender": "Male",
+    "status": "Available",
+    "tagline": "Professional napper & purr machine.",
+    "photos": [
+      "/placeholders/pets/oliver-1.jpg",
+      "/placeholders/pets/oliver-2.jpg"
+    ],
+    "story": "Oliver is a calm and independent cat who enjoys sunbeams and quiet afternoons. He's a bit shy at first but warms up quickly once he trusts you. Perfect companion for someone looking for a low-key friend.",
+    "medicalHistory": "Up-to-date on vaccinations, neutered, microchipped.",
+    "compatibility": {
+      "children": "Prefers a quiet home, older children only.",
+      "otherPets": "Prefers to be the only cat, unknown with dogs."
+    },
+    "location": "Foster Home 1"
+  },
+  {
+    "id": "pet-003",
+    "name": "Coco",
+    "species": "Dog",
+    "breed": "Beagle",
+    "age": 8,
+    "size": "Medium",
+    "gender": "Female",
+    "status": "Available",
+    "tagline": "Scent-sational senior seeking sofa!",
+    "photos": ["/placeholders/pets/coco-1.jpg"],
+    "story": "Coco is a charming older lady who loves sniffing around the yard and enjoys gentle walks. She's past her energetic puppy days and is looking for a comfortable retirement home where she can get lots of pets and naps.",
+    "medicalHistory": "Up-to-date on vaccinations, spayed, needs joint supplement.",
+    "compatibility": {
+      "children": "Good with gentle children.",
+      "otherPets": "Okay with calm dogs, unknown with cats."
+    },
+    "location": "Main Shelter"
+  },
+  {
+    "id": "pet-004",
+    "name": "Peanut",
+    "species": "Rabbit",
+    "breed": "Dutch",
+    "age": 1,
+    "size": "Small",
+    "gender": "Male",
+    "status": "Available",
+    "tagline": "Hoppy and ready for cuddles!",
+    "photos": [
+      "/placeholders/pets/peanut-1.jpg",
+      "/placeholders/pets/peanut-2.jpg"
+    ],
+    "story": "Peanut is an adorable and friendly rabbit who enjoys playtime outside his hutch and gentle head scratches. He's looking for a home where he can be part of the family.",
+    "medicalHistory": "Neutered.",
+    "compatibility": {
+      "children": "Good with children who understand how to handle rabbits gently.",
+      "otherPets": "Unknown with dogs/cats."
+    },
+    "location": "Foster Home 2"
+  },
+  {
+    "id": "pet-005",
+    "name": "Shadow",
+    "species": "Cat",
+    "breed": "Bombay",
+    "age": 3,
+    "size": "Small",
+    "gender": "Male",
+    "status": "Adopted",
+    "tagline": "Sleek and mysterious, found his forever home!",
+    "photos": ["/placeholders/pets/shadow-1.jpg"],
+    "story": "Shadow is a gorgeous black cat who was adopted last month. He quickly settled into his new home and loves playing hide-and-seek.",
+    "medicalHistory": "Up-to-date on vaccinations, neutered, microchipped.",
+    "compatibility": {
+      "children": "Good with older, respectful children.",
+      "otherPets": "Tolerates other cats."
+    },
+    "location": "Adopted"
+  }
+]

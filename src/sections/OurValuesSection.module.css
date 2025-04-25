@@ -1,0 +1,52 @@
+.ourValues {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+}
+
+.ourValues h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center; /* Center heading */
+}
+
+.valuesList {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+    margin: 0;
+}
+
+.valueItem {
+    background-color: var(--background-color-light);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; /* Space between value items */
+}
+
+.valueItem:last-child {
+    margin-bottom: 0;
+}
+
+.valueItem h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.valueItem p {
+    margin-bottom: 0; /* Remove margin below paragraph */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ourValues {
+        padding: 15px;
+    }
+    .valueItem {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+}

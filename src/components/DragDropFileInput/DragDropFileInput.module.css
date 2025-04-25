@@ -1,0 +1,112 @@
+.dragDropArea {
+    border: 2px dashed var(--secondary-color); /* Dashed border */
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+    background-color: var(--background-color-light);
+    min-height: 120px; /* Ensure minimum click/drop area */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For absolute positioning of input */
+}
+
+.dragDropArea:hover {
+    border-color: var(--primary-color);
+    background-color: var(--card-background-light);
+}
+
+.dragDropArea.dragging {
+    border-color: var(--primary-color);
+    background-color: var(
+        --secondary-color
+    ); /* Highlight background when dragging over */
+    color: white;
+}
+/* Style for content inside when dragging */
+.dragging .placeholder p,
+.dragging .placeholder .hint {
+    color: white; /* Change text color */
+}
+
+.fileInput {
+    display: none; /* Hide the actual file input */
+}
+
+.placeholder p {
+    margin-bottom: 5px;
+    font-family: var(--font-primary);
+    font-size: 1.1em;
+}
+
+.placeholder .hint {
+    font-size: 0.9em;
+    color: #666; /* Keep hint text slightly muted */
+    margin-bottom: 0;
+    font-family: var(--font-secondary);
+}
+
+.filePreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filePreview p {
+    margin-bottom: 10px;
+    font-family: var(--font-primary);
+    font-size: 1em;
+}
+
+.filePreview img {
+    max-width: 150px; /* Max size for image preview */
+    max-height: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color-light);
+    object-fit: cover;
+}
+
+.removeButton {
+    background-color: #e74c3c; /* Red color for remove button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+
+.removeButton:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dragDropArea {
+        padding: 20px;
+        min-height: 100px;
+    }
+    .placeholder p {
+        font-size: 1em;
+    }
+    .placeholder .hint {
+        font-size: 0.8em;
+    }
+    .filePreview img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .removeButton {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+}

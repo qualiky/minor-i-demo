@@ -1,0 +1,91 @@
+.quickCtas {
+    padding: 20px;
+    background-color: var(--background-color-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+    text-align: center; /* Center heading */
+}
+
+.quickCtas h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    ); /* Responsive grid for cards */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+}
+
+.ctaCardLink {
+    text-decoration: none; /* Remove underline from Link */
+    color: inherit; /* Inherit text color */
+}
+
+.ctaCard {
+    background-color: var(
+        --card-background-light
+    ); /* Light background for cards */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color-light);
+    font-family: var(--font-primary);
+    height: 100%; /* Ensure cards in the same row have equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.ctaCard:hover {
+    transform: translateY(-5px); /* Lift card slightly */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.ctaCard h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.ctaCard p {
+    margin-bottom: 0; /* Remove margin below paragraph */
+    font-family: var(--font-secondary);
+    font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .quickCtas {
+        padding: 15px;
+    }
+    .quickCtas h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .cardsContainer {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(200px, 1fr)
+        ); /* Adjust min-width for mobile */
+        gap: 15px;
+    }
+    .ctaCard {
+        padding: 20px;
+    }
+    .ctaCard h3 {
+        font-size: 1.2em;
+    }
+    .ctaCard p {
+        font-size: 0.95em;
+    }
+}

@@ -1,0 +1,118 @@
+.galleryPage {
+    /* Add page-specific padding if needed, though main provides it */
+}
+
+.galleryPage h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.galleryControls {
+    background-color: var(--card-background-light);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex; /* Arrange filters and sort side-by-side */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 30px; /* Space between filter/sort blocks */
+    justify-content: space-between; /* Push filter/sort blocks apart */
+    align-items: center; /* Vertically align */
+}
+
+.galleryControls h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1em; /* Smaller heading for controls */
+}
+
+.filters,
+.sort {
+    display: flex;
+    flex-wrap: wrap; /* Allow labels to wrap */
+    gap: 15px; /* Space between filter/sort labels */
+    align-items: center;
+}
+
+.galleryControls label {
+    font-family: var(--font-primary);
+    font-size: 0.9em;
+    color: var(--text-color-light);
+    display: flex; /* Align label text and select */
+    align-items: center;
+    gap: 5px; /* Space between label text and select */
+}
+
+.galleryControls select {
+    padding: 8px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    font-family: var(--font-secondary);
+    font-size: 0.9em;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    cursor: pointer;
+}
+
+.petGrid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    ); /* Responsive grid for cards */
+    gap: 25px; /* Space between pet cards */
+    margin-top: 20px; /* Space below controls if controls are a separate section */
+}
+
+.emptyStateMessage {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--card-background-light);
+    border: 1px dashed var(--primary-color);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.emptyStateMessage p {
+    font-size: 1.1em;
+    color: #555;
+    font-family: var(--font-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .galleryPage h1 {
+        font-size: 2em;
+    }
+    .galleryControls {
+        flex-direction: column; /* Stack controls vertically */
+        align-items: flex-start;
+        gap: 20px;
+        padding: 15px;
+    }
+    .filters,
+    .sort {
+        width: 100%; /* Make filter/sort blocks take full width */
+        flex-direction: column; /* Stack labels within filter/sort blocks */
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .galleryControls label {
+        width: 100%; /* Make labels take full width */
+    }
+    .galleryControls select {
+        flex-grow: 1; /* Allow select to take remaining space */
+        width: auto; /* Override */
+    }
+    .petGrid {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        ); /* Adjust min-width */
+        gap: 20px;
+    }
+    .emptyStateMessage {
+        padding: 20px;
+    }
+}

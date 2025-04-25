@@ -1,0 +1,120 @@
+.faq {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px; /* Add margin below the last section */
+}
+
+.faq h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center; /* Center heading */
+}
+
+.accordion {
+    /* Container for accordion items */
+}
+
+.accordionItem {
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Hide overflowing content */
+    background-color: var(--background-color-light);
+}
+
+.accordionItem:last-child {
+    margin-bottom: 0;
+}
+
+/* Hide the actual checkbox input */
+.accordionToggle {
+    display: none;
+}
+
+/* Style the label (the clickable question) */
+.accordionTitle {
+    display: block;
+    padding: 15px 20px;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    cursor: pointer;
+    position: relative; /* For the icon */
+    user-select: none; /* Prevent text selection on click */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.accordionTitle:hover {
+    background-color: var(--card-background-light);
+}
+
+/* Style the icon (plus/minus) */
+.accordionIcon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the icon when the checkbox is checked */
+.accordionToggle:checked ~ .accordionTitle .accordionIcon {
+    transform: translateY(-50%) rotate(45deg); /* Rotate '+' to 'x' */
+}
+
+/* Style the content area */
+.accordionContent {
+    max-height: 0; /* Collapse content by default */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Smooth transition for expanding/collapsing */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+/* Expand content when the checkbox is checked */
+.accordionToggle:checked ~ .accordionContent {
+    max-height: 500px; /* Set a max-height large enough to accommodate content */
+    padding: 15px 20px; /* Add padding when open */
+}
+
+.accordionContent p {
+    margin-bottom: 0; /* Remove default paragraph margin */
+    font-family: var(--font-secondary);
+    font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faq {
+        padding: 15px;
+    }
+    .faq h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .accordionItem {
+        margin-bottom: 10px;
+    }
+    .accordionTitle {
+        padding: 12px 15px; /* Adjust padding */
+        font-size: 0.95em;
+    }
+    .accordionIcon {
+        right: 15px;
+        font-size: 1em;
+    }
+    .accordionContent {
+        padding: 0 15px;
+    }
+    .accordionToggle:checked ~ .accordionContent {
+        padding: 12px 15px;
+    }
+    .accordionContent p {
+        font-size: 0.9em;
+    }
+}

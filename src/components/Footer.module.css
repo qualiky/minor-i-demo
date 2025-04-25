@@ -1,0 +1,85 @@
+.footer {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color-light);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-top-color 0.3s ease;
+}
+
+.footerContent {
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    justify-content: space-around;
+    gap: 20px; /* Space between sections */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+.footerSection {
+    flex: 1; /* Allows sections to grow/shrink */
+    min-width: 200px; /* Minimum width before wrapping */
+}
+
+.footerSection h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-family: var(--font-primary);
+    font-size: 1.2em; /* Adjust size */
+}
+
+.footerSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerSection ul li {
+    margin-bottom: 10px;
+}
+
+.footerSection ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footerSection a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: var(--font-secondary); /* Use secondary font for links */
+}
+
+.footerSection a:hover {
+    color: var(--primary-color);
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footerBottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color-light);
+    font-size: 0.9em;
+    color: var(--text-color-light); /* Ensure consistent color */
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        align-items: center; /* Center stacked sections */
+        text-align: center; /* Center text within sections */
+    }
+
+    .footerSection {
+        min-width: 90%; /* Allow sections to take up most of the width */
+        margin-bottom: 20px; /* Add space between stacked sections */
+    }
+
+    .footerSection:last-child {
+        margin-bottom: 0;
+    }
+}

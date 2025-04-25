@@ -1,0 +1,59 @@
+.brandStory {
+    padding: 20px;
+    background-color: var(--card-background-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 40px;
+}
+
+.brandStory h1 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.brandStory p {
+    margin-bottom: 15px;
+}
+
+.brandStory h2 {
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.missionVision {
+    display: flex;
+    gap: 30px; /* Space between mission and vision blocks */
+    margin-top: 20px;
+}
+
+.mission,
+.vision {
+    flex: 1; /* Allow blocks to take equal space */
+    padding: 20px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    background-color: var(--background-color-light);
+}
+
+.mission h3,
+.vision h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .brandStory {
+        padding: 15px;
+    }
+    .missionVision {
+        flex-direction: column; /* Stack mission/vision vertically on mobile */
+        gap: 20px;
+    }
+    .mission,
+    .vision {
+        padding: 15px;
+    }
+}

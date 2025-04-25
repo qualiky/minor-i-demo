@@ -1,0 +1,147 @@
+/* Common styles for step containers */
+.stepContent {
+    padding: 20px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: var(--card-background-light);
+    transition: opacity 0.3s ease; /* Fade effect when changing steps */
+}
+
+.stepContent h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid var(--border-color-light);
+    padding-bottom: 10px;
+}
+
+/* Style for form groups */
+.formGroup {
+    margin-bottom: 20px;
+    position: relative; /* Needed for positioning validation icons */
+}
+
+.formGroupCheckbox {
+    margin-bottom: 20px;
+    display: flex; /* Align checkbox and label */
+    align-items: center;
+    gap: 10px; /* Space between checkbox and label */
+}
+
+.formGroup label {
+    display: block; /* Label above input */
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    font-size: 0.9em;
+    color: var(--text-color-light);
+}
+
+.formGroupCheckbox label {
+    margin-bottom: 0; /* Remove bottom margin for inline label */
+    font-weight: normal; /* Less bold for checkbox labels */
+}
+
+/* Basic input, select, textarea styles (can inherit from global) */
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"],
+.formGroup input[type="date"],
+.formGroup textarea,
+.formGroup select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    font-family: var(--font-secondary);
+    font-size: 1em;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    /* Added padding-right for validation icon */
+    padding-right: 30px;
+}
+
+.formGroup input[type="checkbox"] {
+    width: auto; /* Checkbox shouldn't be 100% width */
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Validation icon styling */
+.validationIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%; /* Adjust based on label/input alignment */
+    transform: translateY(-50%);
+    font-size: 1.1em;
+    pointer-events: none; /* Don't interfere with clicks */
+    /* Adjust top for inputs with labels above */
+    top: 35px; /* Approx height of label + margin */
+}
+
+/* Adjust icon position for checkbox/inline labels */
+.formGroupCheckbox .validationIcon {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px; /* Position relative to the .formGroupCheckbox */
+}
+
+/* Error message styling */
+.errorMessage {
+    display: block; /* Ensure it's on a new line */
+    color: var(--primary-color); /* Use primary color for errors */
+    font-size: 0.85em;
+    margin-top: 5px;
+    font-family: var(--font-secondary);
+}
+
+/* Hint text styling */
+.hint {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-family: var(--font-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stepContent {
+        padding: 15px;
+    }
+    .stepContent h3 {
+        font-size: 1.2em;
+    }
+    .formGroup,
+    .formGroupCheckbox {
+        margin-bottom: 15px;
+    }
+    .formGroup label {
+        font-size: 0.85em;
+    }
+    .formGroup input[type="text"],
+    .formGroup input[type="email"],
+    .formGroup input[type="tel"],
+    .formGroup input[type="date"],
+    .formGroup textarea,
+    .formGroup select {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .validationIcon {
+        font-size: 1em;
+        right: 8px;
+        top: 32px; /* Adjust position */
+    }
+    .formGroupCheckbox .validationIcon {
+        right: 8px;
+    }
+    .errorMessage,
+    .hint {
+        font-size: 0.8em;
+    }
+}

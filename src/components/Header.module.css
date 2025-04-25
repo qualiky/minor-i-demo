@@ -1,0 +1,175 @@
+/* Container for the header element */
+.header {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border-color-light);
+    position: sticky; /* Makes the header stick to the top */
+    top: 0;
+    z-index: 1000; /* Ensures it's above other content */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-bottom-color 0.3s ease;
+}
+
+/* Navigation element within the header */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Optional: Limit max width for content */
+    margin: 0 auto; /* Center the content if max-width is set */
+}
+
+/* Logo styling */
+.logo a {
+    font-family: var(--font-primary);
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    /* Added margin to space out from nav links */
+    margin-right: 20px;
+}
+
+/* Navigation links container */
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Individual navigation links */
+.navLinks li a {
+    font-family: var(--font-primary);
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 5px 10px; /* Add padding for clickable area */
+    display: block; /* Make padding effective */
+}
+
+.navLinks li a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Toggle button for dark/light mode */
+.themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--text-color-light);
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.themeToggle:hover {
+    color: var(--primary-color);
+}
+
+/* Hamburger icon for mobile menu */
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--text-color-light);
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: var(--primary-color);
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .navLinks {
+        /* Hide desktop nav by default on mobile */
+        display: none;
+        /* Position the mobile menu (e.g., as a column dropdown or sidebar) */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        right: 0;
+        background-color: var(
+            --background-color-light
+        ); /* Use theme variable */
+        border: 1px solid var(--border-color-light); /* Use theme variable */
+        width: 200px; /* Width of the mobile menu */
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999; /* Below header, but above content */
+        /* Use transform to animate entry/exit */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* State when mobile menu is open */
+    .navLinks.open {
+        display: flex; /* Show the mobile menu */
+        transform: translateX(0); /* Slide in */
+    }
+
+    .navLinks li {
+        margin-bottom: 5px; /* Space between menu items */
+    }
+
+    .navLinks li:last-child {
+        margin-bottom: 0;
+    }
+
+    .navLinks li a {
+        width: 100%; /* Make links fill the container */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+}
+
+/* Style for the logout button within the nav links */
+.navLogoutButton {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: var(--text-color-light); /* Inherit text color */
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: 1em; /* Match other nav links */
+    padding: 5px 10px; /* Match other nav links padding */
+    margin: 0; /* Remove margin */
+    transition: color 0.3s ease;
+}
+
+.navLogoutButton:hover {
+    color: var(--primary-color); /* Match hover effect */
+    text-decoration: none; /* Ensure no underline */
+}
+
+/* Adjust mobile nav links to handle the button */
+@media (max-width: 768px) {
+    .navLinks li {
+        /* ... */
+        width: 100%; /* Ensure li takes full width */
+    }
+    .navLinks li a,
+    .navLinks li .navLogoutButton {
+        /* Apply styles to button as well */
+        width: 100%;
+        padding: 10px; /* More padding for touch target */
+        text-align: left; /* Align text left in the dropdown */
+        border-bottom: 1px solid var(--border-color-light); /* Separator */
+    }
+    .navLinks li:last-child .navLogoutButton {
+        border-bottom: none; /* No border on the last item */
+    }
+    .navLinks li .navLogoutButton {
+        color: var(--text-color-light); /* Ensure button color follows theme */
+    }
+}
