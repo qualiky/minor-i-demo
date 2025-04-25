@@ -1,4 +1,7 @@
 
+# Minor I demo
+
+Source code in React + Vite: [Github](https://github.com/qualiky/minor-i-demo)
 
 ### 🔍 Summary of Requirements
 
