@@ -1,7 +1,8 @@
 
 # Minor I demo
 
-Source code in React + Vite: [Github](https://github.com/qualiky/minor-i-demo)
+- Source code in React + Vite: [Github](https://github.com/qualiky/minor-i-demo)
+- Deployed in Vercel: [Vercel](https://minor-i-demo.vercel.app)
 
 ### 🔍 Summary of Requirements
 
